@@ -1,0 +1,50 @@
+Revision history for Perl extension Text::Balanced.
+
+1.00  Mon Aug 11 12:42:56 1997
+
+	- original version
+
+
+1.01  Mon Sep  8 18:09:18 EST 1997
+
+	- changed "quotemeta" to "quotemeta $_" to work 
+	  around bug in Perl 5.002 and 5.003
+
+
+1.10  Tue Sep 30 17:23:23 EST 1997
+
+	- reworked extract_quotelike to correct handling of some obscure cases
+
+
+1.21  Sat Oct  4 17:21:54 EST 1997
+
+	- synchronised with Parse::RecDescent distribution (version number
+	  will now reflect that package)
+
+1.23  Fri Oct 17 10:26:38 EST 1997
+
+	- changed behaviour in scalar and void contexts. Scalar contexts
+	  now return only the extracted string. Void contexts now remove
+	  the extracted string from the first argument (or $_).
+
+1.24
+
+	- changed behaviour in scalar contexts. Scalar contexts
+	  now return the extracted string _and_ remove it from the
+	  first argument (or $_).
+
+	- changed return values on failure (all contexts return undef
+	  for invalid return fields)
+
+	- fixed some lurking bugs with trailing modifier handling
+	
+	- added :ALL tag to simplify wholesale importing of functions
+
+	- fixed serious bug with embedded division operators ("/")
+	  This now also allows the ?...? form of pattern matching!
+
+1.35	Wed Jun 24 09:53:31 1998
+
+	- fixed handling of :: quantifiers in extract_variable()
+
+	- numerous trivial lexical changes to make xemacs happy
